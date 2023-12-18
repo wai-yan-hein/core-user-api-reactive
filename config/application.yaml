@@ -1,0 +1,7 @@
+spring:
+  r2dbc:
+    url: r2dbc:mariadb://localhost:3306/cv_user_hlacm
+    username: root
+    password: corevalue
+server:
+  port: 8079
