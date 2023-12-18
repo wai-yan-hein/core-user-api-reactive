@@ -2,7 +2,6 @@ package core.user.api.service;
 
 import core.user.api.common.Util1;
 import core.user.api.common.YearEnd;
-import core.user.api.model.BusinessType;
 import core.user.api.model.CompanyInfo;
 import lombok.RequiredArgsConstructor;
 import org.springframework.data.r2dbc.core.R2dbcEntityTemplate;

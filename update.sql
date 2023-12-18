@@ -35,3 +35,20 @@ drop column period,
 change column option option varchar(15) not null first,
 drop primary key,
 add primary key (option);
+
+create table notification (
+  id varchar(50) not null,
+  notification_date datetime default null,
+  title text default null,
+  message text default null,
+  ref_no varchar(50) default null,
+  primary key (id)
+) engine=innodb default charset=utf8mb4 collate=utf8mb4_general_ci;
+
+create table notification_user_join (
+  notification_id varchar(50) not null,
+  user_id varchar(15) not null,
+  seen bit(1) not null default b'0',
+  updated_date timestamp not null,
+  primary key (notification_id,user_id)
+) engine=innodb default charset=utf8mb4 collate=utf8mb4_general_ci;
